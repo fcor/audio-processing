@@ -1,0 +1,83 @@
+.with-error-msg{
+  height: 80px;
+}
+
+.input-container {
+  justify-content: space-between;
+  align-items: center;
+  width: 256px;
+  margin: 0.5rem 0;
+}
+
+.input-container.no-label {
+  justify-content: center;
+}
+
+.label-text {
+  font-family: "Roboto";
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: left;
+  margin-right: 0.5rem;
+}
+
+.label-text.dark {
+  color: var(--lightgray);
+}
+
+.input {
+  margin: 0;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  min-width: 150px;
+  max-width: 200px;
+  font-family: Roboto;
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.input.dark {
+  border: 3px solid var(--primary);
+}
+
+::placeholder {
+  color: var(--lightgray);
+  opacity: 0.5;
+}
+
+.input-error-msg{
+  font-family: "Roboto";
+  font-size: 0.75rem;
+  text-align: left;
+  align-self: center;
+  margin-top: 0.5rem;
+  color: #ffffff;
+}
+
+.input-error-msg.dark {
+  color: var(--error);
+}
+
+.extra-mgn-top {
+  margin-top: 0.75rem;
+}
+
+@media screen and (max-width: 680px) {
+  .input-container {
+    width: 200px;
+    justify-content: space-between;
+  }
+  
+  .label-text {
+    font-size: 0.875rem;
+  }
+
+  .input {
+    min-width: 88px;
+    max-width: 120px;
+    font-size: 0.875rem;
+  }
+}

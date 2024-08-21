@@ -1,38 +1,60 @@
-.App {
+.app {
+  width: 60vw;
+  padding: 2rem;
+  margin: 0 auto;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.files-grid {
+  /* align-self: flex-start; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: 1.5rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid-element {
+  padding: 0.5rem;
+}
+
+.grid-header {
+  padding: 0.5rem;
+  background-color: var(--secondary);
+}
+
+.grid-title {
+  margin: 0;
+  color: var(--primary);
+  font-family: "Roboto";
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.grid-text {
+  margin: 0;
+  color: var(--primary);
+  font-family: "Roboto";
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: flex-start;
+  width: 30vw;
+}
+
+.file-input-box {
+  align-items: center;
+}
+
+.filename {
+  color: var(--primary);
+  font-family: "Roboto";
+  font-size: 12px;
+  margin: 0 0 0 0.5rem;
 }

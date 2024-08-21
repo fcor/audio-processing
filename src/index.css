@@ -1,13 +1,53 @@
-body {
+/* Color palette */
+:root {
+  --primary: #5C45EB;
+  --primarydark: #4432B0;
+  --primarylight: rgba(92, 69, 235, 0.8);
+  --secondary: #9BF99F;
+  --lightgray: #6B707A;
+  --lightergray: rgba(241, 239, 255, 0.25);
+}
+
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  background-color: #fbfaff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title {
+  color: var(--primary);
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+}
+
+.text {
+  color: var(--lightgray);
+  font-family: "Roboto";
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }
