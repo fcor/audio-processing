@@ -3,10 +3,11 @@ import Button from "./components/Button";
 import Input from "./components/Input";
 import "./App.css";
 
+const apiUrl = "http://localhost:5000/upload";
+
 function App() {
   const [keywords, setKeywords] = useState("");
   const [fileName, setFileName] = useState("");
-  const [path, setPath] = useState("");
   const [fileList, setFileList] = useState([]);
 
   const handleUpload = (e) => {
@@ -14,11 +15,12 @@ function App() {
   };
 
   const handleSubmit = () => {
+    const cleanKeywords = keywords.split(",").filter((item) => item.trim() !== "");
     setFileList([
       ...fileList,
       {
         fileName: fileName,
-        keywords,
+        keywords: cleanKeywords,
       },
     ]);
     setFileName("");
@@ -27,6 +29,20 @@ function App() {
 
   const handleExport = () => {
     console.log(fileList);
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(fileList),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Response from server:", data);
+      })
+      .catch((error) => {
+        console.error("Error sending data:", error);
+      });
   };
 
   return (
