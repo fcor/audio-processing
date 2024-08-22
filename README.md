@@ -1,18 +1,28 @@
-# Audio Processing - Client App
+<h1 align="center">Audio Processing - Client App</h1>
 
-## Available Scripts
+## Local development
 
-In the project directory, you can run:
+Follow this instructions to run this project on your local machine.
 
-### `npm start`
+### Prerequisites
+To run this project all you need is node.js. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```sh
+$ node --version
+v20.14.0
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Installation / Setup
+```sh
+$ git clone https://github.com/fcor/audio-processing.git # Clone the repository.
 
-### `npm run build`
+$ cd audio-processing # Navigate into the folder
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+$ npm i # Install dependencies
+
+```
+
+#### Running / Development
+```sh
+$ npm start # Start the local development server
+```
